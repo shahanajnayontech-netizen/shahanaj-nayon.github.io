@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root{
+: root{
   --primary-color:#00aaff;
   --secondary-color: #0066cc;
   --bg-color:#f7f9fc;
@@ -19,7 +19,7 @@
   --shadow:0 8px 30px rgba(0,0,0,.06);
   --transition: all 0.3s ease;
 }
-body.dark{
+body. dark{
   --bg-color:#0e1116;
   --text-color:#e5e7eb;
   --muted:#9ca3af;
@@ -32,19 +32,19 @@ body.dark{
 
 /* Base */
 *{box-sizing:border-box}
-html,body{margin:0}
+html, body{margin:0}
 body{
-  font-family:'Roboto',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+  font-family:'Roboto',system-ui,-apple-system, Segoe UI, Roboto, Ubuntu,' Helvetica Neue' ,Arial;
   background:var(--bg-color);
   color:var(--text-color);
   line-height:1.6;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
   padding-top: 70px; /* Added for fixed navbar */
 }
 
 /* Navbar styles */
-:root {
+: root {
   --color-1: #ff4d4d; /* red */
   --color-2: #00ffff; /* cyan */
   --color-3: #00ff00; /* lime */
@@ -79,7 +79,7 @@ header {
   transition: height var(--transition-speed);
 }
 
-header.compact {
+header. compact {
   height: 60px;
 }
 
@@ -1244,6 +1244,7 @@ footer {
   }
 }
 </style>
+<link rel="stylesheet" href="navbar.css">
 </head>
 <body>
 
@@ -2142,5 +2143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', initFromHash);
 });
 </script>
+<script src="navbar.js" defer></script>
 </body>
+
 </html>

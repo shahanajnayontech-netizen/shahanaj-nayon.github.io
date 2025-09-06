@@ -885,26 +885,23 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Loading animation */
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+
 .loading.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-.loading-content {
-  text-align: center;
+    opacity: 0;
+    visibility: hidden;
 }
 .tech-spinner {
   width: 60px;
@@ -1856,14 +1853,15 @@ footer {
 
 <script>
 // Loading animation - Fixed version
-window.addEventListener('load', function() {
-  const loading = document.getElementById('loading');
-  // Make sure the loading element exists before trying to modify it
-  if (loading) {
+document.addEventListener('DOMContentLoaded', function() {
+    const loading = document.getElementById('loading');
+    
+    // Hide loading animation after 1.5 seconds
     setTimeout(function() {
-      loading.classList.add('hidden');
+        if (loading) {
+            loading.classList.add('hidden');
+        }
     }, 1500);
-  }
 });
 
 /* Theme toggle with persistence */
